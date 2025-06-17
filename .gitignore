@@ -1,0 +1,83 @@
+# -----------------------------------------
+# Java & Compilation
+# -----------------------------------------
+*.class
+*.jar
+*.war
+*.ear
+
+# Dossiers de compilation
+/bin/
+/build/
+out/
+
+# -----------------------------------------
+# IntelliJ IDEA
+# -----------------------------------------
+.idea/
+*.iml
+*.iws
+
+# Fichiers IntelliJ spécifiques inutiles
+shelf/
+.idea/workspace.xml
+tasks.xml
+usage.statistics.xml
+*.ipr
+
+# -----------------------------------------
+# Systèmes de build (si ajoutés plus tard)
+# -----------------------------------------
+# Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# -----------------------------------------
+# OS spécifiques
+# -----------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# -----------------------------------------
+# Logs
+# -----------------------------------------
+*.log
+
+# -----------------------------------------
+# Divers
+# -----------------------------------------
+*.swp
+*.tmp
+*.bak
+*.orig
+
+# -----------------------------------------
+# JetBrains HTTP Client
+# -----------------------------------------
+httpRequests/
+
+# -----------------------------------------
+# Datasource / Maven Home settings
+# -----------------------------------------
+dataSources/
+dataSources.local.xml
+mavenHomeManager.xml
