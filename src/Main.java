@@ -30,8 +30,8 @@ public class Main {
         hugo.getMain().toutRetourner();
         camille.getMain().toutRetourner();
 
-        hugo.afficherMain();
-        camille.afficherMain();
+        System.out.println(hugo);
+        System.out.println(camille);
 
         System.out.println(paquet);
     }

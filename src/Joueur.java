@@ -27,32 +27,38 @@ public class Joueur {
         this.score += points;
     }
 
-    public void afficherMain() {
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
         int taille = main.taille();
 
+        sb.append("👤 ").append(nom).append(" (Score: ").append(score).append(")\n");
+
         if (taille == 0) {
-            System.out.println(nom + " : Plus aucune carte");
-            return;
+            sb.append("Plus aucune carte\n");
+            return sb.toString();
         }
 
         int nbColonnes = taille / 3;
-
-        System.out.println("Main de " + nom + " (" + taille + " cartes)");
 
         for (int ligne = 0; ligne < 3; ligne++) {
             for (int col = 0; col < nbColonnes; col++) {
                 int index = col * 3 + ligne;
                 Carte carte = main.getCarte(index);
-                System.out.print("[ " + carte + " ]" + " ");
+
+                String contenu = carte != null ? carte.toString() : " ";
+                sb.append("[ ").append(padCenter(contenu)).append(" ] ");
             }
-            System.out.println();
+            sb.append("\n");
         }
 
-        System.out.println();
+        return sb.toString();
     }
 
-    @Override
-    public String toString() {
-        return nom + " (Score: " + score + ")";
+    private String padCenter(String s) {
+        int padding = 3 - s.replaceAll("\u001B\\[[;\\d]*m", "").length();
+        int left = padding / 2;
+        int right = padding - left;
+        return " ".repeat(left) + s + " ".repeat(right);
     }
 }
