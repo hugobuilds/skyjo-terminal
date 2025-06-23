@@ -3,21 +3,19 @@ package src;
 public class Main {
 
     public static void main(String[] args) {
-        Carte carte1 = new Carte(-1);
-        Carte carte2 = new Carte(0);
-        Carte carte3 = new Carte(4);
-        Carte carte4 = new Carte(8);
-        Carte carte5 = new Carte(10);
+        Paquet paquet = new Paquet();
 
-        carte1.retourner();
-        carte2.retourner();
+        for (int i = 0; i < 5; i++) paquet.ajouterCarte(new Carte(-2));
+        for (int i = 0; i < 10; i++) paquet.ajouterCarte(new Carte(-1));
+        for (int i = 0; i < 15; i++) paquet.ajouterCarte(new Carte(0));
 
-        carte5.retourner();
+        for (int valeur = 1; valeur <= 12; valeur++) {
+            for (int i = 0; i < 10; i++) {
+                paquet.ajouterCarte(new Carte(valeur));
+            }
+        }
 
-        System.out.println(carte1);
-        System.out.println(carte2);
-        System.out.println(carte3);
-        System.out.println(carte4);
-        System.out.println(carte5);
+        paquet.melanger();
+        System.out.println(paquet);
     }
 }

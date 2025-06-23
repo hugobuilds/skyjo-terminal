@@ -1,6 +1,7 @@
 package src;
 
 public enum CouleurCarte {
+
     BLEU_FONCE("\u001B[34m"),   // Bleu
     BLEU_CLAIR("\u001B[36m"),   // Cyan
     VERT("\u001B[32m"),         // Vert
