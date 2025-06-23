@@ -16,6 +16,23 @@ public class Main {
         }
 
         paquet.melanger();
+        paquet.toutRetourner();
+        System.out.println(paquet);
+
+        Joueur hugo = new Joueur("Hugo");
+        Joueur camille = new Joueur("Camille");
+
+        for (int i = 0; i < 12; i++) {
+            hugo.getMain().ajouterCarte(paquet.piocher());
+            camille.getMain().ajouterCarte(paquet.piocher());
+        }
+
+        hugo.getMain().toutRetourner();
+        camille.getMain().toutRetourner();
+
+        hugo.afficherMain();
+        camille.afficherMain();
+
         System.out.println(paquet);
     }
 }

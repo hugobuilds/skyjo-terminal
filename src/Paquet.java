@@ -17,7 +17,9 @@ public class Paquet {
     }
 
     public void melanger() {
-        Collections.shuffle(cartes);
+        for (int i = 0; i < 3; i++) {
+            Collections.shuffle(cartes);
+        }
     }
 
     public Carte piocher() {
@@ -31,8 +33,22 @@ public class Paquet {
         return cartes.size();
     }
 
+    public Carte getCarte(int index) {
+        if (index < 0 || index >= cartes.size())
+            return null;
+
+        return cartes.get(index);
+    }
+
+
     public boolean estVide() {
         return cartes.isEmpty();
+    }
+
+    public void toutRetourner() {
+        for (Carte carte : cartes) {
+            carte.retourner();
+        }
     }
 
     @Override
@@ -40,7 +56,6 @@ public class Paquet {
         StringBuilder sb = new StringBuilder();
 
         for (Carte carte : cartes) {
-            carte.retourner();
             sb.append(carte.toString()).append(" ");
         }
 

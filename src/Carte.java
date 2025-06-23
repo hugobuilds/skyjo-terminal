@@ -44,6 +44,6 @@ public class Carte {
         String gras = "\u001B[1m";
         String reset = "\u001B[0m";
 
-        return couleur.getCodeAnsi() + gras + valeur + reset;
+        return couleur.getCodeAnsi() + gras + String.format("%2d", valeur) + reset;
     }
 }
