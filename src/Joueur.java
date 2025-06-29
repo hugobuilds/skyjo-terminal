@@ -49,6 +49,7 @@ public class Joueur {
                 String contenu = carte != null ? carte.toString() : " ";
                 sb.append("[ ").append(padCenter(contenu)).append(" ] ");
             }
+
             sb.append("\n");
         }
 

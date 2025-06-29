@@ -55,9 +55,8 @@ public class Paquet {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        for (Carte carte : cartes) {
-            sb.append(carte.toString()).append(" ");
-        }
+        for (Carte carte : cartes) sb.append(carte.toString()).append(" ");
+        sb.append("\n");
 
         return sb.toString();
     }
